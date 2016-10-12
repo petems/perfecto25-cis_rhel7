@@ -11,7 +11,7 @@ class cis_rhel7 inherits ::cis_rhel7::params {
   include ::cis_rhel7::rule::rule_1_1_5
   include ::cis_rhel7::rule::rule_1_1_7
   include ::cis_rhel7::rule::rule_1_1_14
-  include ::cis_rhel7::rule::rule_1_1_17
+  # include ::cis_rhel7::rule::rule_1_1_17 (breaks PuppetDB report storing)
   include ::cis_rhel7::rule::rule_1_1_18
   include ::cis_rhel7::rule::rule_1_2_1
   include ::cis_rhel7::rule::rule_1_2_2
@@ -57,14 +57,14 @@ class cis_rhel7 inherits ::cis_rhel7::params {
   # include ::cis_rhel7::rule::rule_6_4 (manual check)
   include ::cis_rhel7::rule::rule_6_5
   include ::cis_rhel7::rule::rule_7_1_1
-  include ::cis_rhel7::rule::rule_7_2
+  # include ::cis_rhel7::rule::rule_7_2 (breaks PuppetDB report storing)
   include ::cis_rhel7::rule::rule_7_3
   include ::cis_rhel7::rule::rule_7_4
   include ::cis_rhel7::rule::rule_7_5
   include ::cis_rhel7::rule::rule_8_1
   # include ::cis_rhel7::rule::rule_9_1_1 (manual check)
   include ::cis_rhel7::rule::rule_9_1_2
-  include ::cis_rhel7::rule::rule_9_1_10
+  # include ::cis_rhel7::rule::rule_9_1_10 (breaks PuppetDB report storing)
   include ::cis_rhel7::rule::rule_9_1_11
   include ::cis_rhel7::rule::rule_9_1_12
   include ::cis_rhel7::rule::rule_9_1_13
