@@ -15,7 +15,7 @@ Facter.add('cis_benchmarks') do
 			redhat_gpg=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_redhat_gpg.sh')
 			pw_hash=Facter::Core::Execution.exec('authconfig --test | grep hashing | grep sha512')
 			inactive_acct=Facter::Core::Execution.exec("useradd -D | grep INACTIVE | awk -F= {'print $2'}")
-			system_acct=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_disable_sys_acct.sh')
+			#system_acct=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_disable_sys_acct.sh')
 			unowned_files=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_unowned_files.sh')
 			ungrouped_files=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_ungrouped_files.sh')
 			suid_exec=Facter::Core::Execution.exec('/tmp/cis_scripts/cis_suid_exec.sh')
@@ -38,9 +38,9 @@ Facter.add('cis_benchmarks') do
 
 
 			# Rule 1.1.17
-			if ww_dirs
-				cis_benchmarks['ww_dirs'] = ww_dirs
-			end
+			#if ww_dirs
+				#cis_benchmarks['ww_dirs'] = ww_dirs
+			#end
 
 			# Rule 1.2.1
 			if redhat_network
