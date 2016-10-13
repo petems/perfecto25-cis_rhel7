@@ -1,16 +1,7 @@
-class cis_rhel7::params {
-  
-# Resource Defaults to NOOP 
-File      { noop => true }
-File_line { noop => true }
-User      { noop => true }
-Exec      { noop => true, path => '/usr/bin:/usr/sbin:/bin' }
-Mount     { noop => true } 
-Service   { noop => true }
-Package   { noop => true }
-Cron      { noop => true }
-Augeas    { noop => true }
-Pam       { noop => true }
+class cis_rhel7::params
+{
+
+$run_noop = true
 
 $cis_scripts_dir = '/tmp/cis_scripts'
 

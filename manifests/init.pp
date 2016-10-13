@@ -2,10 +2,26 @@
 # Reference for this Module:
 # CIS_Red_Hat_Enterprise_Linux_7_Benchmark_v1.0.0.pdf
 
-class cis_rhel7 inherits ::cis_rhel7::params {
-  
+class cis_rhel7 inherits ::cis_rhel7::params
+(
+  $run_noop = $::cis_rhel7::params::run_noop,
+)
+{
+
+  # Running resources as noop
+  File      { noop => $run_noop }
+  File_line { noop => $run_noop }
+  User      { noop => $run_noop }
+  Exec      { noop => $run_noop, path => '/usr/bin:/usr/sbin:/bin' }
+  Mount     { noop => $run_noop }
+  Service   { noop => $run_noop }
+  Package   { noop => $run_noop }
+  Cron      { noop => $run_noop }
+  Augeas    { noop => $run_noop }
+  Pam       { noop => $run_noop }
+
   ## Rules
-  
+
   include ::cis_rhel7::rule::prereq
   include ::cis_rhel7::rule::rule_1_1_1
   include ::cis_rhel7::rule::rule_1_1_5
