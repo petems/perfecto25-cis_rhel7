@@ -2,10 +2,11 @@
 # Reference for this Module:
 # CIS_Red_Hat_Enterprise_Linux_7_Benchmark_v1.0.0.pdf
 
-class cis_rhel7 inherits ::cis_rhel7::params
+class cis_rhel7
 (
   $run_noop = $::cis_rhel7::params::run_noop,
 )
+inherits ::cis_rhel7::params
 {
 
   # Running resources as noop
