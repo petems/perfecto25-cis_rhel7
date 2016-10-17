@@ -54,7 +54,7 @@ inherits ::cis_rhel7::params
   include ::cis_rhel7::rule::rule_5_1_1
   include ::cis_rhel7::rule::rule_5_2_1_1
   include ::cis_rhel7::rule::rule_5_2_4
-  include ::cis_rhel7::rule::rule_5_3
+  # include ::cis_rhel7::rule::rule_5_3
   include ::cis_rhel7::rule::rule_6_1_1
   include ::cis_rhel7::rule::rule_6_2_1
   # include ::cis_rhel7::rule::rule_6_3_1
