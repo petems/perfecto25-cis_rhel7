@@ -11,6 +11,8 @@ inherits ::cis_rhel7::params
 
   ## Rules
 
+  Exec      { path => '/usr/bin:/usr/sbin:/bin' }
+
   include ::cis_rhel7::rule::prereq
   include ::cis_rhel7::rule::rule_1_1_1
   include ::cis_rhel7::rule::rule_1_1_5
