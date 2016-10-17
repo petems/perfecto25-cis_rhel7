@@ -57,10 +57,10 @@ inherits ::cis_rhel7::params
   include ::cis_rhel7::rule::rule_5_3
   include ::cis_rhel7::rule::rule_6_1_1
   include ::cis_rhel7::rule::rule_6_2_1
-  include ::cis_rhel7::rule::rule_6_3_1
-  include ::cis_rhel7::rule::rule_6_3_2
-  include ::cis_rhel7::rule::rule_6_3_3
-  include ::cis_rhel7::rule::rule_6_3_4
+  # include ::cis_rhel7::rule::rule_6_3_1
+  # include ::cis_rhel7::rule::rule_6_3_2
+  # include ::cis_rhel7::rule::rule_6_3_3
+  # include ::cis_rhel7::rule::rule_6_3_4
   # include ::cis_rhel7::rule::rule_6_4 (manual check)
   include ::cis_rhel7::rule::rule_6_5
   include ::cis_rhel7::rule::rule_7_1_1
